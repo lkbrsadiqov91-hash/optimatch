@@ -1,6 +1,6 @@
 import streamlit as st
 from datetime import datetime
-
+import numpy as np
 # Tətbiq konfiqurasiyası (İkon və Başlıq)
 st.set_page_config(
     page_title="OptiMatch",
