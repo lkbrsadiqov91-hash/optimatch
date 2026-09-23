@@ -7,9 +7,12 @@ from datetime import datetime, timedelta
 # 1. SƏHİFƏ TƏNZİMLƏMƏLƏRİ VƏ TAB-LAR
 # --------------------------------------------------
 
+import streamlit as st
+
+# Tətbiq konfiqurasiyası (İkon və Başlıq)
 st.set_page_config(
     page_title="OptiMatch",
-    page_icon="⚽",
+    page_icon="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png",
     layout="wide"
 )
 
