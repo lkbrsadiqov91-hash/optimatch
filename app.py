@@ -1,13 +1,4 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
-from datetime import datetime, timedelta
-
-# --------------------------------------------------
-# 1. SƏHİFƏ TƏNZİMLƏMƏLƏRİ VƏ TAB-LAR
-# --------------------------------------------------
-
-import streamlit as st
 
 # Tətbiq konfiqurasiyası (İkon və Başlıq)
 st.set_page_config(
@@ -16,21 +7,16 @@ st.set_page_config(
     layout="wide"
 )
 
-# Mobil PWA (Ad və İkon Tənzimləməsi)
-# Mobil PWA (Tam Uyumlu İkon və İsim Kodu)
+# Tam Ekran Tətbiq (PWA Standalone) Rejimi
 st.markdown("""
     <head>
-        <title>OptiMatch</title>
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-title" content="OptiMatch">
-        <meta name="application-name" content="OptiMatch">
         <meta name="mobile-web-app-capable" content="yes">
-        
-        <!-- İkon Bağlantıları -->
-        <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
-        <link rel="shortcut icon" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
+        <meta name="display" content="standalone">
+        <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
+        <link rel="manifest" href="data:application/json,{%22name%22:%22OptiMatch%22,%22short_name%22:%22OptiMatch%22,%22start_url%22:%22/%22,%22display%22:%22standalone%22,%22background_color%22:%22%23ffffff%22,%22theme_color%22:%22%23ffffff%22,%22icons%22:[{%22src%22:%22https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png%22,%22sizes%22:%22192x192%22,%22type%22:%22image/png%22}]}">
     </head>
 """, unsafe_allow_html=True)
 st.title("⚽ OptiMatch — Optimizasiya Və Ədalətli Bölüşdürmə Modeli")
