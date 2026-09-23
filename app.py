@@ -3,21 +3,27 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-# ---------------------------------------------------------
+# --------------------------------------------------
 # 1. SƏHİFƏ TƏNZİMLƏMƏLƏRİ VƏ TAB-LAR
-# ---------------------------------------------------------
+# --------------------------------------------------
+
 st.set_page_config(
-    page_title="OptiMatch - Təqvim və Qrup Generatoru",
+    page_title="OptiMatch",
     page_icon="⚽",
     layout="wide"
 )
-# Mobil PWA (Tətbiq kimi Yükləmə) Meta Kodu
+
+# Mobil PWA (Ad və İkon Tənzimləməsi)
 st.markdown("""
     <head>
+        <title>OptiMatch</title>
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-title" content="OptiMatch">
+        <meta name="application-name" content="OptiMatch">
         <meta name="mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
+        <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
     </head>
 """, unsafe_allow_html=True)
 st.title("⚽ OptiMatch — Optimizasiya Və Ədalətli Bölüşdürmə Modeli")
