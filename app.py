@@ -11,7 +11,15 @@ st.set_page_config(
     page_icon="⚽",
     layout="wide"
 )
-
+# Mobil PWA (Tətbiq kimi Yükləmə) Meta Kodu
+st.markdown("""
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="OptiMatch">
+        <meta name="mobile-web-app-capable" content="yes">
+    </head>
+""", unsafe_allow_html=True)
 st.title("⚽ OptiMatch — Optimizasiya Və Ədalətli Bölüşdürmə Modeli")
 st.caption("Karabakh State University | Mathematics Education Project")
 st.markdown("---")
