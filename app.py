@@ -1,6 +1,7 @@
 import streamlit as st
-from datetime import datetime
+from datetime import datetime, timedelta
 import numpy as np
+import random
 # Tətbiq konfiqurasiyası (İkon və Başlıq)
 st.set_page_config(
     page_title="OptiMatch",
