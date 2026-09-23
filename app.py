@@ -14,6 +14,7 @@ st.set_page_config(
 )
 
 # Mobil PWA (Ad və İkon Tənzimləməsi)
+# Mobil PWA (Tam Uyumlu İkon və İsim Kodu)
 st.markdown("""
     <head>
         <title>OptiMatch</title>
@@ -22,8 +23,11 @@ st.markdown("""
         <meta name="apple-mobile-web-app-title" content="OptiMatch">
         <meta name="application-name" content="OptiMatch">
         <meta name="mobile-web-app-capable" content="yes">
-        <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
-        <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
+        
+        <!-- İkon Bağlantıları -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
+        <link rel="shortcut icon" href="https://raw.githubusercontent.com/lkbrsadiqov91-hash/optimatch/main/icon.png">
     </head>
 """, unsafe_allow_html=True)
 st.title("⚽ OptiMatch — Optimizasiya Və Ədalətli Bölüşdürmə Modeli")
