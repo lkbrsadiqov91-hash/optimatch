@@ -114,7 +114,6 @@ with tab2:
     
     if st.button("Pley-off Cədvəlini Qur", key="playoff_btn"):
         st.success(f"{num_teams} komandalı universitet pley-off mərhələsi uğurla generasiya edildi!")
-        # Sadə pley-off ağacı nümunəsi
         if num_teams == 4:
             st.markdown("### 🏆 Yarımfinal və Final")
             st.write("1. Qarabağ Universiteti vs ADA Universiteti")
@@ -131,7 +130,6 @@ with tab3:
     
     num_groups = st.number_input("Yaradılacaq Qrup Sayı:", min_value=2, max_value=6, value=4)
     
-    # Nümunə tələbə siyahısı və balları
     students_data = [
         {"Ad": "Əli", "Bal": 95}, {"Ad": "Valide", "Bal": 92}, {"Ad": "Məhəmməd", "Bal": 91}, {"Ad": "Leyla", "Bal": 94},
         {"Ad": "Nigar", "Bal": 85}, {"Ad": "Rauf", "Bal": 78}, {"Ad": "Orxan", "Bal": 82}, {"Ad": "Sevinc", "Bal": 75},
@@ -140,11 +138,9 @@ with tab3:
     ]
     
     if st.button("Qrupları Ədalətli Böl (GPA Balansı)", key="group_btn"):
-        # Ballara görə sıralayıb səbətlərə bölmə məntiqi (Ziq-zaq üsulu ilə ədalətli paylama)
         sorted_students = sorted(students_data, key=lambda x: x["Bal"], reverse=True)
         groups = [[] for _ in range(num_groups)]
         
-        # Səbət sistemi ilə ədalətli paylanma
         for i, student in enumerate(sorted_students):
             group_idx = i % num_groups if (i // num_groups) % 2 == 0 else num_groups - 1 - (i % num_groups)
             groups[group_idx].append(student)
@@ -154,6 +150,6 @@ with tab3:
             with g_cols[idx]:
                 st.markdown(f"#### Qrup {idx + 1}")
                 avg_score = sum(s["Bal"] for s in group) / len(group)
-                st.caption(𒈠Ortalama Bal: {round(avg_score, 1)}")
+                st.caption(f"Ortalama Bal: {round(avg_score, 1)}")
                 for s in group:
                     st.write(f"- {s['Ad']} ({s['Bal']} bal)")
